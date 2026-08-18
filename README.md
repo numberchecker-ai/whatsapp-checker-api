@@ -1,6 +1,6 @@
 # WhatsApp Checker API — Bulk Registration Verification | NumberChecker
 
-The **NumberChecker WhatsApp Checker API** verifies whether phone numbers are registered on WhatsApp. It is an asynchronous, file-based API for bulk list cleaning: upload E.164 phone numbers, poll the task, and download the exported registration results. This is the official NumberChecker example repository, with integrations in eight languages.
+The **NumberChecker WhatsApp Checker API** verifies whether phone numbers are registered on WhatsApp. It is an asynchronous, file-based API for bulk list cleaning: upload E.164 phone numbers, poll the task, and download the exported registration results. This is the official NumberChecker example repository, with integrations in seven languages.
 
 - **Product page:** https://numberchecker.ai/products/whatsapp-checker
 - **API documentation:** https://docs.numberchecker.ai/whatsapp-bulk-checker
@@ -95,7 +95,7 @@ Task states are `pending`, `processing`, `exported`, and `failed`. Download `res
 
 Check the current account balance with `GET /v1/balance` using the same authentication header.
 
-## Runnable examples in eight languages
+## Runnable examples in seven languages
 
 Complete submit → poll → download clients are available for:
 
@@ -107,7 +107,6 @@ Complete submit → poll → download clients are available for:
 | Java | [`examples/java`](examples/java) |
 | C# | [`examples/csharp`](examples/csharp) |
 | PHP | [`examples/php`](examples/php) |
-| JavaScript (browser) | [`examples/javascript`](examples/javascript) |
 | Shell / curl | [`examples/shell`](examples/shell) |
 
 Run examples from the `examples` directory so `numbers.txt` resolves correctly. Each language folder lists its prerequisites and command.
