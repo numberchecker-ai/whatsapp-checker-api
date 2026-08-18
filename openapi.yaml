@@ -3,6 +3,15 @@ info:
   title: WhatsApp Checker API
   version: 1.0.0
   description: Check whether phone numbers are registered on WhatsApp with the NumberChecker asynchronous API.
+  contact:
+    name: NumberChecker
+    url: https://numberchecker.ai/products/whatsapp-checker
+  license:
+    name: MIT
+    url: https://opensource.org/license/mit
+externalDocs:
+  description: NumberChecker WhatsApp API documentation
+  url: https://docs.numberchecker.ai/whatsapp-bulk-checker
 servers:
   - url: https://api.numberchecker.ai
 security:

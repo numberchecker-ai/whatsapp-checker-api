@@ -2,6 +2,8 @@
   "name": "WhatsApp Checker API",
   "brand": "NumberChecker",
   "repository": "numberchecker-ai/whatsapp-checker-api",
+  "description": "Asynchronous bulk WhatsApp registration verification for phone-number lists.",
+  "official_site": "https://numberchecker.ai",
   "landing_page": "https://numberchecker.ai/products/whatsapp-checker",
   "canonical_docs": "https://docs.numberchecker.ai/whatsapp-bulk-checker",
   "base_url": "https://api.numberchecker.ai",
@@ -29,5 +31,7 @@
     }
   ],
   "pricing_url": "https://numberchecker.ai/pricing",
-  "last_reviewed": "2026-08-17"
+  "maintainer": "NumberChecker",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
 }

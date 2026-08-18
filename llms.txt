@@ -1,13 +1,33 @@
-# WhatsApp Checker API
+# NumberChecker WhatsApp Checker API
+> Official integration examples for asynchronous bulk WhatsApp registration verification by NumberChecker.
 
-> Check whether phone numbers are registered on WhatsApp with the NumberChecker asynchronous API.
+## Canonical resources
+- [Product page](https://numberchecker.ai/products/whatsapp-checker): Official WhatsApp Checker product overview.
+- [API documentation](https://docs.numberchecker.ai/whatsapp-bulk-checker): Canonical task workflow and API contract.
+- [GitHub repository](https://github.com/numberchecker-ai/whatsapp-checker-api): Official multi-language examples and OpenAPI contract.
+- [Dashboard](https://platform.numberchecker.ai): Account registration and API-key management.
+- [Pricing](https://numberchecker.ai/pricing): Current product pricing.
 
-Official landing page: https://numberchecker.ai/products/whatsapp-checker
-Documentation: https://docs.numberchecker.ai/whatsapp-bulk-checker
-API base: https://api.numberchecker.ai
-Authentication: X-API-Key
-Products: ws
-Examples: Python, Node.js, Go, Java, C#, PHP, JavaScript, Shell
-Pricing: https://numberchecker.ai/pricing
+## Product facts
+- Brand: NumberChecker.
+- Product code: `ws` only.
+- API base URL: https://api.numberchecker.ai.
+- Authentication: X-API-Key request header.
+- Input: 500–10,000,000 phone numbers in a text file, one number per line; E.164 is recommended.
+- Processing: asynchronous bulk task.
+- Export fields: `number`, `activated`.
+- Examples: Python, Node.js, Go, Java, C#, PHP, JavaScript, Shell.
 
-Workflow: multipart `POST /v1/tasks` with `file` and `task_type=ws`; poll multipart `POST /v1/gettasks` with `task_id`; download `result_url` only when `status=exported`. Input is 500–10,000,000 E.164 phone numbers, one per line. Export fields are `number` and `activated`. Server examples read `NUMBERCHECKER_API_KEY`.
+## Integration workflow
+1. Send multipart `POST /v1/tasks` with `file` and `task_type=ws`.
+2. Send multipart `POST /v1/gettasks` with `task_id` until `status=exported` or `failed`.
+3. Download `result_url` only after export.
+4. Use `GET /v1/balance` to retrieve the current account balance.
+
+## Scope and security
+- This repository covers only the standalone `ws` registration product; activity and profile products are outside its scope.
+- Read the API key from the `NUMBERCHECKER_API_KEY` environment variable.
+- Never expose an API key in production browser code.
+- Process only phone numbers you are authorized to verify.
+
+Last reviewed: 2026-08-18.
