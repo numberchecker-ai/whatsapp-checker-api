@@ -1,0 +1,33 @@
+{
+  "name": "WhatsApp Checker API",
+  "brand": "NumberChecker",
+  "repository": "numberchecker-ai/whatsapp-checker-api",
+  "landing_page": "https://numberchecker.ai/products/whatsapp-checker",
+  "canonical_docs": "https://docs.numberchecker.ai/whatsapp-bulk-checker",
+  "base_url": "https://api.numberchecker.ai",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "async",
+  "endpoints": {
+    "create_task": { "method": "POST", "path": "/v1/tasks" },
+    "get_task": { "method": "POST", "path": "/v1/gettasks" },
+    "balance": { "method": "GET", "path": "/v1/balance" }
+  },
+  "input": { "format": "text", "one_per_line": true, "phone_format": "E.164 recommended" },
+  "products": [
+    {
+      "type": "ws",
+      "name": "WhatsApp Checker",
+      "min": 500,
+      "max": 10000000,
+      "fields": [
+        "number",
+        "activated"
+      ]
+    }
+  ],
+  "pricing_url": "https://numberchecker.ai/pricing",
+  "last_reviewed": "2026-08-17"
+}

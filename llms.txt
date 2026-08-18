@@ -1,0 +1,13 @@
+# WhatsApp Checker API
+
+> Check whether phone numbers are registered on WhatsApp with the NumberChecker asynchronous API.
+
+Official landing page: https://numberchecker.ai/products/whatsapp-checker
+Documentation: https://docs.numberchecker.ai/whatsapp-bulk-checker
+API base: https://api.numberchecker.ai
+Authentication: X-API-Key
+Products: ws
+Examples: Python, Node.js, Go, Java, C#, PHP, JavaScript, Shell
+Pricing: https://numberchecker.ai/pricing
+
+Workflow: multipart `POST /v1/tasks` with `file` and `task_type=ws`; poll multipart `POST /v1/gettasks` with `task_id`; download `result_url` only when `status=exported`. Input is 500–10,000,000 E.164 phone numbers, one per line. Export fields are `number` and `activated`. Server examples read `NUMBERCHECKER_API_KEY`.

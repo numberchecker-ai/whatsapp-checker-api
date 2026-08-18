@@ -1,0 +1,13 @@
+# PHP example
+
+Requires PHP 7.4+ with the cURL extension.
+
+From the repository root:
+
+```bash
+export NUMBERCHECKER_API_KEY="YOUR_API_KEY"
+cd examples
+php php/whatsapp_checker.php
+```
+
+Submits to `POST /v1/tasks` (`task_type=ws`), polls `POST /v1/gettasks`, downloads results. Full docs: https://docs.numberchecker.ai/whatsapp-bulk-checker

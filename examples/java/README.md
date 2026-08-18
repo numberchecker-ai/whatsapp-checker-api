@@ -1,0 +1,15 @@
+# Java example
+
+Requires Java 11+ (uses `java.net.http.HttpClient`, no external dependencies).
+
+From the repository root:
+
+```bash
+export NUMBERCHECKER_API_KEY="YOUR_API_KEY"
+cd examples
+java java/WhatsAppChecker.java
+```
+
+Submits to `POST /v1/tasks` (`task_type=ws`), polls `POST /v1/gettasks`, prints the result URL.
+
+> This example keeps JSON/multipart handling dependency-free for readability. In production, use a JSON library (Jackson/Gson) and a multipart helper. Full docs: https://docs.numberchecker.ai/whatsapp-bulk-checker
