@@ -12,7 +12,8 @@ class WhatsAppChecker
     const string BaseUrl = "https://api.numberchecker.ai";
     const string TaskType = "ws"; // ws
     static readonly string ApiKey =
-        Environment.GetEnvironmentVariable("NUMBERCHECKER_API_KEY") ?? "YOUR_API_KEY";
+        Environment.GetEnvironmentVariable("NUMBERCHECKER_API_KEY")
+        ?? throw new Exception("Set the NUMBERCHECKER_API_KEY environment variable");
     static readonly HttpClient Http = new HttpClient();
 
     static async Task<JsonElement> PostAsync(string url, MultipartFormDataContent form)
@@ -59,8 +60,8 @@ class WhatsAppChecker
 
         if (task.TryGetProperty("result_url", out var url) && url.GetString() is string u && u.Length > 0)
         {
-            File.WriteAllBytes("results.xlsx", await Http.GetByteArrayAsync(u));
-            Console.WriteLine("saved to: results.xlsx");
+            File.WriteAllBytes("results.zip", await Http.GetByteArrayAsync(u));
+            Console.WriteLine("saved to: results.zip");
         }
     }
 }
