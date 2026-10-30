@@ -21,8 +21,8 @@ The API accepts a text file containing 500–10,000,000 phone numbers and return
 | Input | Text file, one phone number per line |
 | Recommended format | E.164, including country code |
 | Processing mode | Asynchronous bulk task |
-| Minimum batch | 500 numbers |
-| Maximum batch | 10,000,000 numbers |
+| Minimum upload | 1 identifiers |
+| Maximum upload | 10,000,000 identifiers |
 | Export fields | `number`, `activated` |
 
 ## How do I check WhatsApp numbers in bulk?
@@ -142,4 +142,13 @@ Use this API only for data you are authorized to process and comply with applica
 
 ---
 
-*Last reviewed: 2026-08-18 · Maintained by NumberChecker. Canonical product page: https://numberchecker.ai/products/whatsapp-checker*
+*Last reviewed: 2026-10-30 · Maintained by NumberChecker. Canonical product page: https://numberchecker.ai/products/whatsapp-checker*
+
+
+## Upload and billing limits verified 2026-10-30
+
+| Task type | Minimum upload | Maximum upload | Minimum billable quantity |
+| --- | ---: | ---: | ---: |
+| `ws` | 1 | 10,000,000 | 500 |
+
+Upload minimum and minimum billable quantity are different. A smaller accepted upload can still be billed at the stated minimum. Zero means no billing floor. A wholly failed/unprocessed task is not charged a fabricated minimum. Check current account pricing before submitting.

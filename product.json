@@ -13,25 +13,41 @@
   },
   "mode": "async",
   "endpoints": {
-    "create_task": { "method": "POST", "path": "/v1/tasks" },
-    "get_task": { "method": "POST", "path": "/v1/gettasks" },
-    "balance": { "method": "GET", "path": "/v1/balance" }
+    "create_task": {
+      "method": "POST",
+      "path": "/v1/tasks"
+    },
+    "get_task": {
+      "method": "POST",
+      "path": "/v1/gettasks"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
   },
-  "input": { "format": "text", "one_per_line": true, "phone_format": "E.164 recommended" },
+  "input": {
+    "format": "text",
+    "one_per_line": true,
+    "phone_format": "E.164 recommended"
+  },
   "products": [
     {
       "type": "ws",
       "name": "WhatsApp Checker",
-      "min": 500,
+      "min": 1,
       "max": 10000000,
       "fields": [
         "number",
         "activated"
-      ]
+      ],
+      "product_id": 1,
+      "min_billable_numbers": 500,
+      "available": true
     }
   ],
   "pricing_url": "https://numberchecker.ai/pricing",
   "maintainer": "NumberChecker",
   "license": "MIT",
-  "last_reviewed": "2026-08-18"
+  "last_reviewed": "2026-10-30"
 }
